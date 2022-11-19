@@ -3,7 +3,6 @@ package logia.research.java;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -14,10 +13,9 @@ public class CharacterMagics extends BenchmarkTest {
     }
 
     static final int fork = 1;
-    static final int warmup = 1;
-    static final int measurement = 1;
-    static final Integer[] ns = {154,456,6,89,7,4,422,786,32345,9076,467,65432,12345};
-    static final String a = "con bò cạp cạp con bò cạp";
+    static final int warmup = 2;
+    static final int measurement = 5;
+    static final String a = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut. Vitae ultricies leo integer malesuada nunc vel risus. Id nibh tortor id aliquet lectus proin. Nunc mattis enim ut tellus elementum sagittis vitae et.";
 
     @Override
     @Benchmark
@@ -27,7 +25,7 @@ public class CharacterMagics extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void a() {
-        System.out.println(Arrays.toString(normalPeopleSplit(a, " ")));
+        normalPeopleReplace(a, "b", "B");
     }
 
     @Override
@@ -38,30 +36,77 @@ public class CharacterMagics extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void b() {
-        System.out.println(Arrays.toString(geniusSplit(a, ' ')));
+        geniusReplace(a, 'b', "B");
     }
 
-    String normalPeopleReplace(String a) {
-        return a.replaceAll("b", "B");
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void c() {
+        normalPeopleSplit(a, ",");
     }
 
-    String geniusReplace(String a) {
-        return replace(a, 'b', "B");
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void d() {
+        geniusSplit(a, ',');
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void e() {
+        normalEquals(a, a);
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void f() {
+        geniusEquals(a, a);
+    }
+
+    String normalPeopleReplace(String text, String mark, String replacement) {
+        return text.replaceAll(mark, replacement);
+    }
+
+    String geniusReplace(String text, char mark, String replacement) {
+        return replace(text, mark, replacement);
     }
 
     private static String replace(String text, char c, String value) {
         StringBuilder builder = new StringBuilder();
         int i = 0;
         int length = text.length();
-        while(i < length) {
-            char tc = text.charAt(i);
+        for (char tc : text.toCharArray()) {
             if(tc == c) {
                 builder.append(value);
             } else {
                 builder.append(tc);
             }
-            i++;
         }
+//        while(i < length) {
+//            char tc = text.charAt(i);
+//            if(tc == c) {
+//                builder.append(value);
+//            } else {
+//                builder.append(tc);
+//            }
+//            i++;
+//        }
         return builder.toString();
     }
 
@@ -86,6 +131,14 @@ public class CharacterMagics extends BenchmarkTest {
             i++;
         }
         if(start < length) list.add(text.substring(start, length));
-        return list.toArray(new String[list.size()]);
+        return list.toArray(new String[0]);
+    }
+
+    boolean normalEquals(String a, String b) {
+        return a.equals(b);
+    }
+
+    boolean geniusEquals(String a, String b) {
+        return a.intern() == b.intern();
     }
 }

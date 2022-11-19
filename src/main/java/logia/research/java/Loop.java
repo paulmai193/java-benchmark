@@ -26,7 +26,7 @@ public class Loop extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void a() {
-        foreachArray(ns);
+        foreachCollection(linkedList);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class Loop extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void b() {
-        forindexArray(ns);
+        forindexCollection(linkedList);
     }
 
     void forindexArray(Integer[] array) {

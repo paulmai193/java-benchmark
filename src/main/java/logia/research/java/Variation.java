@@ -40,9 +40,9 @@ public class Variation extends BenchmarkTest {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(value = 1)
-    @Warmup(iterations = 2, time = 1)
-    @Measurement(iterations = 10, time = 1)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
     public void b() {
         int count = 0;
         for (int i = 0; i < ns.length; i++) {

@@ -45,7 +45,7 @@ public class Type extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void c() {
-        short[] ns = {1,2,3,4,5,6,7,8,9};
+        byte[] ns = {1,2,3,4,5,6,7,8,9};
         sum(ns);
     }
 
@@ -65,9 +65,9 @@ public class Type extends BenchmarkTest {
         return result;
     }
 
-    short sum(short[] args) {
-        short result = 0;
-        for (short l : args) {
+    short sum(byte[] args) {
+        byte result = 0;
+        for (byte l : args) {
             result += l;
         }
         return result;

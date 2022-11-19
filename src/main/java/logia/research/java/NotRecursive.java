@@ -29,9 +29,9 @@ public class NotRecursive extends BenchmarkTest {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(value = 1)
-    @Warmup(iterations = 0, time = 1)
-    @Measurement(iterations = 3, time = 1)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
     public void b() {
         doLoopFibbonaci(10);
     }
