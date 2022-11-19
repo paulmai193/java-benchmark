@@ -4,15 +4,16 @@ import org.openjdk.jmh.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
-public class Type extends BenchmarkTest {
+public class StringAppend extends BenchmarkTest {
 
     public static void main(String[] args) {
-        init(Type.class);
+        init(StringAppend.class);
     }
 
     static final int fork = 1;
     static final int warmup = 1;
-    static final int measurement = 5;
+    static final int measurement = 10;
+    static final Integer[] ns = {154,456,6,89,7,4,422,786,32345,9076,467,65432,12345};
 
     @Override
     @Benchmark
@@ -22,8 +23,7 @@ public class Type extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void a() {
-        long[] ns = {1,2,3,4,5,6,7,8,9};
-        sum(ns);
+        useAddA();
     }
 
     @Override
@@ -34,8 +34,7 @@ public class Type extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void b() {
-        int[] ns = {1,2,3,4,5,6,7,8,9};
-        sum(ns);
+        useAddB();
     }
 
     @Benchmark
@@ -45,31 +44,30 @@ public class Type extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void c() {
-        short[] ns = {1,2,3,4,5,6,7,8,9};
-        sum(ns);
+        useBuilder();
     }
 
-    long sum(long[] args) {
-        long result = 0;
-        for (long l : args) {
-            result += l;
+    String useAddA() {
+        String s = "";
+        for (Integer n : ns) {
+            s += n;
         }
-        return result;
+        return s;
     }
 
-    int sum(int[] args) {
-        int result = 0;
-        for (int l : args) {
-            result += l;
+    String useAddB() {
+        String s = "";
+        for (Integer n : ns) {
+            s += ("" + n);
         }
-        return result;
+        return s;
     }
 
-    short sum(short[] args) {
-        short result = 0;
-        for (short l : args) {
-            result += l;
+    String useBuilder() {
+        StringBuilder s = new StringBuilder();
+        for (Integer n : ns) {
+            s.append(n);
         }
-        return result;
+        return s.toString();
     }
 }

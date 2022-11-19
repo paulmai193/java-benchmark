@@ -44,7 +44,7 @@ public class Condition extends BenchmarkTest {
             if (x == 0 || x == 1) {
                 count++;
             } else if (x == 2 || x == 3) {
-
+                // Do nothing
             } else {
                 count++;
             }
@@ -63,6 +63,7 @@ public class Condition extends BenchmarkTest {
                     break;
                 case 2:
                 case 3:
+                    // Do nothing
                     break;
                 default:
                     count++;
