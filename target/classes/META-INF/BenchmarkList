@@ -1,0 +1,11 @@
+JMH S 29 logia.research.java.Condition S 53 logia.research.java.jmh_generated.Condition_a_jmhTest S 1 a S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 29 logia.research.java.Condition S 53 logia.research.java.jmh_generated.Condition_b_jmhTest S 1 b S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 24 logia.research.java.Loop S 48 logia.research.java.jmh_generated.Loop_a_jmhTest S 1 a S 11 AverageTime E A 1 1 1 E I 1 2 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 24 logia.research.java.Loop S 48 logia.research.java.jmh_generated.Loop_b_jmhTest S 1 b S 11 AverageTime E A 1 1 1 E I 1 2 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 32 logia.research.java.NotRecursive S 56 logia.research.java.jmh_generated.NotRecursive_a_jmhTest S 1 a S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 32 logia.research.java.NotRecursive S 56 logia.research.java.jmh_generated.NotRecursive_b_jmhTest S 1 b S 11 AverageTime E A 1 1 1 E I 1 0 T 3 1 s E I 1 3 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 24 logia.research.java.Type S 48 logia.research.java.jmh_generated.Type_a_jmhTest S 1 a S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 24 logia.research.java.Type S 48 logia.research.java.jmh_generated.Type_b_jmhTest S 1 b S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 24 logia.research.java.Type S 55 logia.research.java.jmh_generated.Type_moreGood_jmhTest S 8 moreGood S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 29 logia.research.java.Variation S 53 logia.research.java.jmh_generated.Variation_a_jmhTest S 1 a S 11 AverageTime E A 1 1 1 E I 1 1 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 29 logia.research.java.Variation S 53 logia.research.java.jmh_generated.Variation_b_jmhTest S 1 b S 11 AverageTime E A 1 1 1 E I 1 2 T 3 1 s E I 2 10 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
