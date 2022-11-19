@@ -3,5 +3,13 @@ dontinline,*.*_avgt_jmhStub
 dontinline,*.*_sample_jmhStub
 dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
-inline,logia/research/java/Final.a
-inline,logia/research/java/Final.b
+inline,logia/research/java/BestList.add1ArrayList
+inline,logia/research/java/BestList.add1LinkedList
+inline,logia/research/java/BestList.add2ArrayListIndex
+inline,logia/research/java/BestList.add2LinkedListIndex
+inline,logia/research/java/BestList.getFirstArrayList
+inline,logia/research/java/BestList.getFirstLinkedList
+inline,logia/research/java/BestList.remove1ArrayList
+inline,logia/research/java/BestList.remove1LinkedList
+inline,logia/research/java/BestList.remove2ArrayList
+inline,logia/research/java/BestList.remove2LinkedList
