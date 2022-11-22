@@ -14,7 +14,7 @@ public class Loop extends BenchmarkTest {
     static final int fork = 1;
     static final int warmup = 2;
     static final int measurement = 5;
-    static final Integer[] ns = {154,456,6,89,7,4,422,786,32345,9076,467,65432,12345};
+    static final Integer[] ns = {12345,154,456,6,89,7,4,422,786,32345,9076,467,422,65432,12345};
     static final List<Integer> list = Arrays.asList(ns);
     static final LinkedList<Integer> linkedList = new LinkedList<>(list);
 
