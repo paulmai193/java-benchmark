@@ -14,7 +14,6 @@ public class Final extends BenchmarkTest {
     static final int warmup = 1;
     static final int measurement = 10;
 
-    @Override
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
@@ -26,7 +25,6 @@ public class Final extends BenchmarkTest {
         sum(ns);
     }
 
-    @Override
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)

@@ -17,7 +17,6 @@ public class Generics extends BenchmarkTest {
     static final Integer[] ns = {154,456,6,89,7,4,422,786,32345,9076,467,65432,12345};
     static final List<Integer> list = Arrays.asList(ns);
 
-    @Override
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
@@ -28,7 +27,6 @@ public class Generics extends BenchmarkTest {
         loopA();
     }
 
-    @Override
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)

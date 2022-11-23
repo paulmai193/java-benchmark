@@ -17,7 +17,6 @@ public class CharacterMagics extends BenchmarkTest {
     static final int measurement = 5;
     static final String a = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut. Vitae ultricies leo integer malesuada nunc vel risus. Id nibh tortor id aliquet lectus proin. Nunc mattis enim ut tellus elementum sagittis vitae et.";
 
-    @Override
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
@@ -28,7 +27,6 @@ public class CharacterMagics extends BenchmarkTest {
         normalPeopleReplace(a, "b", "B");
     }
 
-    @Override
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)

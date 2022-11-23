@@ -188,13 +188,4 @@ public class BestList extends BenchmarkTest {
         return list.getFirst();
     }
 
-    @Override
-    public void a() {
-
-    }
-
-    @Override
-    public void b() {
-
-    }
 }
