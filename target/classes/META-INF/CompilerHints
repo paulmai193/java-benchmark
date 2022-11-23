@@ -3,7 +3,5 @@ dontinline,*.*_avgt_jmhStub
 dontinline,*.*_sample_jmhStub
 dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
-inline,logia/research/java/LoopIndexVsIterator.arrayIterator
-inline,logia/research/java/LoopIndexVsIterator.arrayLoopIndex
-inline,logia/research/java/LoopIndexVsIterator.collectionIterator
-inline,logia/research/java/LoopIndexVsIterator.collectionLoopIndex
+inline,logia/research/java/Generics.addAllLoopCast
+inline,logia/research/java/Generics.addAllLoopGeneric

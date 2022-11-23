@@ -23,51 +23,7 @@ public class Generics extends BenchmarkTest {
     @Fork(value = fork)
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
-    public void a() {
-        loopA();
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(value = fork)
-    @Warmup(iterations = warmup, time = 1)
-    @Measurement(iterations = measurement, time = 1)
-    public void b() {
-        loopB();
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(value = fork)
-    @Warmup(iterations = warmup, time = 1)
-    @Measurement(iterations = measurement, time = 1)
-    public void c() {
-        addAllA();
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(value = fork)
-    @Warmup(iterations = warmup, time = 1)
-    @Measurement(iterations = measurement, time = 1)
-    public void d() {
-        addAllB();
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    @Fork(value = fork)
-    @Warmup(iterations = warmup, time = 1)
-    @Measurement(iterations = measurement, time = 1)
-    public void e() {
-        addAllC();
-    }
-
-    Collection<Integer> loopA() {
+    public void addAllLoopCast() {
         List<Integer> lst = new ArrayList<>();
         int i = 0;
         while (i < list.size()) {
@@ -75,32 +31,52 @@ public class Generics extends BenchmarkTest {
             lst.add(number);
             i++;
         }
-        return lst;
     }
 
-    Collection<Integer> loopB() {
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void addAllLoopGeneric() {
         List<Integer> lst = new ArrayList<>();
         int i = 0;
         while (i < list.size()) {
             lst.add(list.get(i));
             i++;
         }
-        return lst;
     }
 
-    Collection<Integer> addAllA() {
+//    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void addAllMethod1() {
         List<Integer> lst = new ArrayList<>();
         lst.addAll(list);
-        return lst;
     }
 
-    Collection<Integer> addAllB() {
+//    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void addAllMethod2() {
         List<Integer> lst = new ArrayList<>(list);
-        return lst;
     }
 
-    Collection<Integer> addAllC() {
+//    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @Fork(value = fork)
+    @Warmup(iterations = warmup, time = 1)
+    @Measurement(iterations = measurement, time = 1)
+    public void addAllMethod3() {
         List<Integer> list = Arrays.asList(ns);
-        return list;
     }
+
 }

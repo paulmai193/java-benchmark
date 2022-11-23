@@ -2,7 +2,10 @@ package logia.research.java;
 
 import org.openjdk.jmh.annotations.*;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class LoopIndexVsIterator extends BenchmarkTest {
@@ -56,7 +59,7 @@ public class LoopIndexVsIterator extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void collectionLoopIndex() {
-        int count = this.loop(linkedList);
+        int count = this.loop(list);
     }
 
     @Benchmark
@@ -66,7 +69,7 @@ public class LoopIndexVsIterator extends BenchmarkTest {
     @Warmup(iterations = warmup, time = 1)
     @Measurement(iterations = measurement, time = 1)
     public void collectionIterator() {
-        int count = this.iterator(linkedList);
+        int count = this.iterator(list);
     }
 
     int loop(List<Integer> collection) {
@@ -89,4 +92,5 @@ public class LoopIndexVsIterator extends BenchmarkTest {
         }
         return count;
     }
+
 }
