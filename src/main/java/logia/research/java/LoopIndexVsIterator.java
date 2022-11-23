@@ -3,7 +3,6 @@ package logia.research.java;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
