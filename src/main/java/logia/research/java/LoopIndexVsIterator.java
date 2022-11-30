@@ -2,9 +2,7 @@ package logia.research.java;
 
 import org.openjdk.jmh.annotations.*;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class LoopIndexVsIterator extends BenchmarkTest {
@@ -19,6 +17,7 @@ public class LoopIndexVsIterator extends BenchmarkTest {
     static final Integer[] ns = {12345,154,456,6,89,7,4,422,786,32345,9076,467,422,65432,12345};
     static final List<Integer> list = Arrays.asList(ns);
     static final LinkedList<Integer> linkedList = new LinkedList<>(list);
+    static final Set<Integer> set = new HashSet<>(list);
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
