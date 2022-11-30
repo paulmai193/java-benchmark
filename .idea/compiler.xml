@@ -17,6 +17,7 @@
           <entry name="$MAVEN_REPOSITORY$/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar" />
         </processorPath>
+        <module name="java-research" />
         <module name="java-benchmark" />
       </profile>
     </annotationProcessing>
