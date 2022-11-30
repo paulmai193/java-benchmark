@@ -48,8 +48,6 @@ public class Condition extends BenchmarkTest {
                 case 3:
                     // Do nothing
                     break;
-                case 0:
-                case 1:
                 default:
                     count++;
                     break;
