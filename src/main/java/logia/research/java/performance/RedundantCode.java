@@ -1,7 +1,6 @@
-package logia.research.java;
+package logia.research.java.performance;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.*;

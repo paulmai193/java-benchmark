@@ -1,4 +1,4 @@
-package logia.research.java;
+package logia.research.java.performance;
 
 import org.openjdk.jmh.annotations.*;
 
