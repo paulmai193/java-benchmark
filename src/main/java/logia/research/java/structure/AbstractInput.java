@@ -12,7 +12,7 @@ public class AbstractInput {
         calculateVolumePackage(aPackage);
     }
 
-    public static float calculateVolumeItem(logia.research.java.structure.entity.Item item) {
+    public static float calculateVolumeItem(Item item) {
         return item.getWidth() * item.getLength() * item.getHeight();
     }
 
