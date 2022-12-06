@@ -13,5 +13,5 @@ public class Item {
     private float weight;
     private byte rackNo;
     private byte shelveNo;
-    private Package aPackage; // Relationship
+    private Box box; // Relationship
 }

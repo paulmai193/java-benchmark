@@ -6,7 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.List;
 
 @Data
-public class Package {
+public class Box {
     private String code;
     private ZonedDateTime datePack;
     private float totalAmount;

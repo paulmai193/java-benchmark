@@ -1,6 +1,6 @@
 package logia.research.java.art.entity;
 
-public interface Dimension {
+public interface IDimension {
     float getWidth();
     float getLength();
     float getHeight();

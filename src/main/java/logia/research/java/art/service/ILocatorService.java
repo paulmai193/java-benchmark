@@ -1,5 +1,7 @@
 package logia.research.java.art.service;
 
+import logia.research.java.art.entity.IPackage;
+
 public interface ILocatorService {
-    ILocator getByLocation(byte rackNo, byte shelveNo);
+    IPackage getByLocation(byte rackNo, byte shelveNo);
 }
