@@ -12,7 +12,7 @@ public class Condition extends BenchmarkTest {
 
     static final int fork = 1;
     static final int warmup = 1;
-    static final int measurement = 5;
+    static final int measurement = 10;
     static final Integer[] ns = {154,456,6,89,7,4,422,786,32345,9076,467,65432,12345};
 
     @Benchmark
