@@ -80,7 +80,6 @@ public class RecursiveVsLoop extends BenchmarkTest {
 
     int doRecursiveFactorial(int n) {
         return n == 1 ? 1 : n * doRecursiveFactorial(n - 1);
-//        return doTailRecursiveFactorial(1, n);
     }
 
     int doLoopFactorial(int n) {
@@ -89,10 +88,6 @@ public class RecursiveVsLoop extends BenchmarkTest {
             result *= i;
         }
         return result;
-    }
-
-    int doTailRecursiveFactorial(int result, int n) {
-        return n == 1 ? result : doTailRecursiveFactorial(result * n, n - 1);
     }
 
     int doRecursiveFibbonaci(int n) {
