@@ -1,7 +1,7 @@
-package logia.research.java.structure;
+package logia.research.java.art;
 
-import logia.research.java.structure.entity.Item;
-import logia.research.java.structure.entity.Package;
+import logia.research.java.art.entity.Item;
+import logia.research.java.art.entity.Package;
 
 public class AbstractInput {
     public static void main(String[] args) {

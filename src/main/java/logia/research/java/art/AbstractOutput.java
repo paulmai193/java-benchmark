@@ -1,6 +1,6 @@
-package logia.research.java.structure;
+package logia.research.java.art;
 
-import logia.research.java.structure.entity.Item;
+import logia.research.java.art.entity.Item;
 
 public class AbstractOutput {
 

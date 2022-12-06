@@ -1,4 +1,4 @@
-package logia.research.java.structure.entity;
+package logia.research.java.art.entity;
 
 import lombok.Data;
 
