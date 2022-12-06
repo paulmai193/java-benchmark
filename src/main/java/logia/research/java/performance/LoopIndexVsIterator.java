@@ -11,9 +11,9 @@ public class LoopIndexVsIterator extends BenchmarkTest {
         init(LoopIndexVsIterator.class);
     }
 
-    static final int fork = 2;
-    static final int warmup = 1;
-    static final int measurement = 5;
+    static final int fork = 1;
+    static final int warmup = 2;
+    static final int measurement = 10;
     static final Integer[] ns = {12345,154,456,6,89,7,4,422,786,32345,9076,467,422,65432,12345};
     static final List<Integer> list = Arrays.asList(ns);
     static final LinkedList<Integer> linkedList = new LinkedList<>(list);
@@ -50,7 +50,7 @@ public class LoopIndexVsIterator extends BenchmarkTest {
         }
     }
 
-    @Benchmark
+//    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     @Fork(value = fork)
@@ -60,7 +60,7 @@ public class LoopIndexVsIterator extends BenchmarkTest {
         int count = this.loop(list);
     }
 
-    @Benchmark
+//    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     @Fork(value = fork)
