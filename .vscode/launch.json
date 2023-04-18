@@ -1,0 +1,126 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AbstractInput",
+            "request": "launch",
+            "mainClass": "logia.research.java.art.AbstractInput",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "BestList",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.BestList",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "CharacterMagics",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.CharacterMagics",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "Condition",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.Condition",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "Datatypes",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.Datatypes",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "Final",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.Final",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "LoopIndexVsIterator",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.LoopIndexVsIterator",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "RabinKarpAlgm",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.RabinKarpAlgm",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "RecursiveVsLoop",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.RecursiveVsLoop",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "RedundantCode",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.RedundantCode",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "StringAppend",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.StringAppend",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "Variables",
+            "request": "launch",
+            "mainClass": "logia.research.java.performance.Variables",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "BitTest",
+            "request": "launch",
+            "mainClass": "logia.research.java.quicktest.BitTest",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "Codility",
+            "request": "launch",
+            "mainClass": "logia.research.java.quicktest.Codility",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "FingerprintsTest",
+            "request": "launch",
+            "mainClass": "logia.research.java.test.FingerprintsTest",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
+            "name": "UtilTest",
+            "request": "launch",
+            "mainClass": "logia.research.java.test.UtilTest",
+            "projectName": "java-research"
+        }
+    ]
+}

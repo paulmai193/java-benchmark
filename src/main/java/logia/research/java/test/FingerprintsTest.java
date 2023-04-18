@@ -12,7 +12,6 @@ public class FingerprintsTest {
     public static void main(String[] args) {
         HashCode probeHash = Hashing.farmHashFingerprint64().hashBytes(probe.getBytes(StandardCharsets.UTF_8));
         HashCode cadidateHash = Hashing.farmHashFingerprint64().hashBytes(candidate.getBytes(StandardCharsets.UTF_8));
-        probeHash.
 
 //        System.out.println(matcher.match(candidateTempate));
     }
