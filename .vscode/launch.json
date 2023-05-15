@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Algorithm",
+            "request": "launch",
+            "mainClass": "logia.research.java.quicktest.Algorithm",
+            "projectName": "java-research"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

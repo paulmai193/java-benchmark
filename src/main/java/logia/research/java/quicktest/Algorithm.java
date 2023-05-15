@@ -1,43 +1,33 @@
 package logia.research.java.quicktest;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 import org.apache.commons.lang3.RandomUtils;
 
 public class Algorithm {
 
     public static void main(String[] args) {
-        // int[] a = {-1,2,1,-4};
-        // System.out.println(Arrays.toString(a));
-        System.out.println(solution("23"));
+        System.out.println(solution("]"));
     }
 
-    static List<String> solution(final String digits) {
-        int n = digits.length();
-        String[] arr = { "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
-        ArrayList<String> l = new ArrayList<String>();
-        if (n == 0)
-            return l;
-        Queue<String> q = new LinkedList<String>();
-        q.add("");
-        while (!q.isEmpty()) {
-            String s = q.remove();
-            if (s.length() != n) {
-                String val = arr[(digits.charAt(s.length()) - '0') - 2];
-                for (int i = 0; i < val.length(); i++) {
-                    q.add(s + val.charAt(i));
-                    System.out.println(q);
-                }
-            } else
-                l.add(s);
+    static boolean solution(String s) {
+        final List<Character> open = Arrays.asList('{', '[', '(');
+        final List<Character> close = Arrays.asList('}', ']', ')');
+        final List<Character> stack = new ArrayList<>(s.length() / 2);
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (open.contains(c)) {
+                stack.add(0, c);
+            }
+            else if (close.contains(c)) {
+                if (stack.isEmpty() || (open.indexOf(stack.get(0)) != close.indexOf(c))) return false;
+                else stack.remove(0);
+            }
         }
-        return l;
+        return stack.isEmpty() ? true : false;
     }
 
     static int[] randomArray(int size) {
